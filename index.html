@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Decodificador Tiger</title>
+</head>
+<body>
+    <main>
+        <section class="principal">
+            <div class="principal__apresentacao">
+                <img class="logo" src="./assets/tiger-logo-orange-removebg-preview.png" alt="Logotipo de Tigre">
+                <h1>Decodificador Tiger</h1>
+            </div>
+
+            <div class="principal__conteudo">
+                <div id="area_de_texto">
+                    <textarea id="principal__conteudo__entrada_texto" rows="7" placeholder="Digite seu texto..." wrap="hard"></textarea>
+                </div>
+
+                <div class="principal__conteudo__acoes">
+                    <h4><img class="icon-exclamation" src="./assets/icon-exclamation.svg">Apenas letras minúsculas e sem acento</h4>
+                    <div class="principal__conteudo__acoes__botoes">
+                        <a class="botao_criptografar" onclick="cliqueCriptografar()">Criptografar</a>
+                        <a class="botao_descriptografar" onclick="cliqueDescriptografar()">Descriptografar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secundario">
+            <div class="secundario__vazio">
+                <img class="secundario__vazio__imagem" src="./assets/tiger-watching-compressed.png">
+                <h2 class="secundario__vazio__titulo">Nenhuma Mensagem Encontrada</h2>
+                <p class="secundario__vazio__descricao">Digite um texto que você queira criptografar ou descriptografar</p>
+            </div>
+
+            <div class="secundario__resultado">
+                <h3 class="secundario__resultado__titulo"></h3>
+                <a class="secundario__resultado__botao_copiar" onclick="cliqueCopiar()">Copiar</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts/app.js"></script>
+</body>
+</html>

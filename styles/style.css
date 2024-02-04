@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    padding:0;
+    margin:0;
+    font-family:'Inter', sans-serif;
+}
+
+:root {
+    --primary-color: #fffaef;
+    --secundary-color: #eb8d00;
+    --tertiary-color: #393E46;
+    --quaternary-color: #ffffff;
+    --hover-color: #222831;
+}
+
+body {
+    height:100vh;
+    width:100vw;
+    background-color: var(--primary-color);
+}
+
+main {
+    display:flex;
+    padding:40px;
+    justify-content:space-between;
+    gap: 80px;
+    height:calc(100% - 80px);
+}
+
+a {
+    padding-top:24px;
+    padding-bottom:24px;
+    border-radius:24px;
+    font-size:1rem;
+    font-weight:400;
+    text-align:center;
+}
+
+h4 {
+    display:flex;
+    gap:5px;
+    align-items:center;
+    font-weight:400;
+    font-size:0.8rem;
+}
+
+.principal {
+    width:70%;
+    display:flex;
+    flex-direction:column;
+}
+
+.principal__apresentacao {
+    display:flex;
+    width: 390px;
+    align-items: center;
+    padding-bottom:15px;
+    border-bottom: 1px solid var(--secundary-color);
+    font-size:1rem;
+    color: var(--secundary-color);
+}
+
+.principal__conteudo {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding-bottom:32px;
+    padding-left:10%;
+    margin-top:80px;
+    height:100%;
+}
+
+#area_de_texto {
+    padding-bottom:20px;
+}
+
+#principal__conteudo__entrada_texto {
+    font-size: 2rem;
+    width:98%;
+    height:100%;
+    padding:10px;
+    color:var(--secundary-color);
+    background-color:var(--primary-color);
+    text-transform:lowercase;
+    border:none;
+    resize: none;
+    outline:none;
+}
+
+::placeholder {
+    color: var(--secundary-color);
+}
+
+.principal__conteudo__acoes {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    gap:16px;
+}
+
+.principal__conteudo__acoes__botoes {
+    display:flex;
+    justify-content: space-between;
+    gap:24px;
+}
+
+.botao_criptografar, .botao_descriptografar  {
+    width:50%;
+}
+
+a {
+    font-size: 1.1rem;
+    cursor:pointer;
+}
+
+.botao_criptografar {
+    background-color: var(--secundary-color);
+    color:var(--quaternary-color);
+}
+
+.botao_descriptografar {
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    border:1px solid var(--secundary-color);
+}
+
+.secundario {
+    width:30%;
+    background-color: var(--quaternary-color);
+    border-radius:32px;
+    padding:32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
+}
+
+.secundario__resultado {
+    display:none;
+    height:100%;
+    flex-direction: column;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.secundario__resultado__titulo {
+    color: var(--secundary-color);
+    font-size:1.5rem;
+    font-weight:400;
+}
+
+.secundario__vazio {    
+    font-size:1rem;
+    color: var(--secundary-color);
+    text-align:center;
+}
+
+.secundario__vazio__descricao {
+    color: var(--tertiary-color);
+}
+
+.secundario__vazio__imagem {
+    width:300px;
+    padding-top:32%;
+}
+
+.secundario__resultado__botao_copiar {
+    background-color: var(--quaternary-color);
+    color: var(--secundary-color);
+    border: 1px solid var(--secundary-color);
+}
+
+@media (max-width:1050px) {
+    * {
+        margin:0;
+        padding:0;
+    }
+    body {
+        height:100%;
+    }
+    main {
+        flex-direction:column;
+        gap:40px;
+        padding:20px;
+    }
+    .principal {
+        width:100%;
+        height:100%;
+    }
+    .principal__conteudo {
+        padding-left:0;
+        padding-top:80px;
+        padding-bottom:0;
+        margin:0;
+    }
+    .secundario {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        width:100%;
+        padding:0;
+        height:100%;
+    }
+    .secundario__vazio {
+        padding:20px;
+    }
+    .secundario__vazio__imagem {
+        display:none;
+    }
+    .secundario__resultado {
+        padding:25px;
+    }
+}
+
+@media (max-width:470px) {
+    .principal__conteudo__acoes__botoes {
+        flex-direction:column;
+    }
+    .botao_criptografar, .botao_descriptografar {
+        width:100%;
+    }
+    .principal__apresentacao {
+        width:100%;
+    }
+}
